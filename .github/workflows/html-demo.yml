@@ -1,0 +1,17 @@
+name: HTML Demo
+
+on:
+    push:
+
+jobs:
+    html-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4 # Github Runner will download the code
+
+            - name: Display files
+              run: ls -la # List all the files in the repository
+
+            - name: Display HTML file
+              run: cat index.html # Display the contents of the HTML file
